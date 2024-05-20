@@ -27,7 +27,7 @@ const Posts = ({ posts }) => {
                 href={`/${blog_folder}/${posts[0].slug}`}
                 className="block hover:text-primary"
               >
-                {posts[0].frontmatter.title}
+                Nossa missão
               </Link>
             </h2>
             <p className="text-text">
@@ -41,7 +41,7 @@ const Posts = ({ posts }) => {
               href={`/${blog_folder}/${posts[0].slug}`}
               rel=""
             >
-              Read More
+              Leia mais
             </Link>
           </div>
         </div>
@@ -71,7 +71,7 @@ const Posts = ({ posts }) => {
             href={`/${blog_folder}/${post.slug}`}
             rel=""
           >
-            Read More
+            Leia mais
           </Link>
         </div>
       ))}

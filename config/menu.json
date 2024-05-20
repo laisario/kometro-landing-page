@@ -1,19 +1,19 @@
 {
   "main": [
     {
-      "name": "Home",
+      "name": "Página inicial",
       "url": "/"
     },
     {
-      "name": "Blog",
+      "name": "Integridade",
       "url": "/blogs"
     },
     {
-      "name": "Pricing",
+      "name": "Serviços",
       "url": "/pricing"
     },
     {
-      "name": "Contact",
+      "name": "Fale conosco",
       "url": "/contact"
     },
     {
