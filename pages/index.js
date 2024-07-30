@@ -8,6 +8,7 @@ import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import { getListPage } from "../lib/contentParser";
+import YoutubePlayer from "@layouts/components/YoutubePlayer";
 
 const Home = ({ frontmatter }) => {
   const { banner, feature, services, workflow, call_to_action } = frontmatter;
@@ -31,14 +32,17 @@ const Home = ({ frontmatter }) => {
                   {banner.button.label}
                 </Link>
               )}
-              <Image
-                className="mx-auto mt-12"
-                src={banner.image}
-                width={750}
-                height={390}
-                alt="banner image"
-                priority
-              />
+              <div class="flex flex-row">
+                <Image
+                  className="mx-auto mt-12"
+                  src={banner.image}
+                  width={750}
+                  height={390}
+                  alt="banner image"
+                  priority
+                />
+                <YoutubePlayer id="cHrrdmRuwpM" title='Exemplo de video' />
+              </div>
             </div>
           </div>
         </div>
@@ -109,9 +113,8 @@ const Home = ({ frontmatter }) => {
 
                 {/* Content */}
                 <div
-                  className={`service-content mt-5 md:mt-0 ${
-                    !isOdd && "md:order-1"
-                  }`}
+                  className={`service-content mt-5 md:mt-0 ${!isOdd && "md:order-1"
+                    }`}
                 >
                   <h2 className="font-bold leading-[40px]">{service?.title}</h2>
                   <p className="mt-4 mb-2">{service?.content}</p>
