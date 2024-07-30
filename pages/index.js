@@ -32,17 +32,15 @@ const Home = ({ frontmatter }) => {
                   {banner.button.label}
                 </Link>
               )}
-              <div class="flex flex-row">
-                <Image
-                  className="mx-auto mt-12"
-                  src={banner.image}
-                  width={750}
-                  height={390}
-                  alt="banner image"
-                  priority
-                />
-                <YoutubePlayer id="cHrrdmRuwpM" title='Exemplo de video' />
-              </div>
+              <Image
+                className="mx-auto mt-12"
+                src={banner.image}
+                width={750}
+                height={390}
+                alt="banner image"
+                priority
+              />
+              {/* <YoutubePlayer id="cHrrdmRuwpM" title='Exemplo de video' /> */}
             </div>
           </div>
         </div>
@@ -156,6 +154,21 @@ const Home = ({ frontmatter }) => {
           width={1920}
           height={296}
         />
+      
+      </section>
+
+      <section className="section bg-theme-light">
+        <div className="container">
+        <div className="mb-8 text-center">
+          {markdownify(
+            "Video institucional",
+            "h2",
+            "mx-auto max-w-[400px] font-bold leading-[44px]"
+          )}
+        </div>
+          <YoutubePlayer id="cHrrdmRuwpM" title='Exemplo de video' />
+
+        </div>
       </section>
 
       {/* Cta */}

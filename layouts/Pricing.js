@@ -70,11 +70,6 @@ function Pricing({ data }) {
           </div>
         </div>
       </section>
-      {/* <div className="flex justify-center items-center">
-        <div className="bg-gray-100 p-6 rounded-lg text-center">
-          {markdownify(readMore[selectedOption], "p", "mx-auto max-w-lg")}
-        </div>
-      </div> */}
       <div>
       </div>
       <Cta cta={call_to_action} />
