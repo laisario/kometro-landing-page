@@ -1,4 +1,5 @@
 import Pagination from "@components/Pagination";
+import Cta from "@layouts/components/Cta";
 import config from "@config/config.json";
 import Base from "@layouts/Baseof";
 import { getListPage, getSinglePage } from "@lib/contentParser";
@@ -7,7 +8,6 @@ import { markdownify } from "@lib/utils/textConverter";
 import Posts from "@partials/Posts";
 const { blog_folder } = config.settings;
 
-const titlePage = "Nossa Abordagem de Integridade"
 
 // blog pagination
 const BlogPagination = ({ postIndex, posts, currentPage, pagination }) => {
@@ -15,15 +15,14 @@ const BlogPagination = ({ postIndex, posts, currentPage, pagination }) => {
   const indexOfFirstPost = indexOfLastPost - pagination;
   const totalPages = Math.ceil(posts.length / pagination);
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
-  const { frontmatter, content } = postIndex;
+  const { frontmatter } = postIndex;
   const { title } = frontmatter;
-  console.log(posts)
   return (
     <Base title={title}>
       <section className="section">
         <div className="container">
-          {markdownify(titlePage, "h1", "h1 text-center font-normal text-[56px]")}
-          <Posts posts={currentPosts} />
+          {markdownify(frontmatter?.title, "h1", "h1 text-center font-normal text-[56px]")}
+          <Posts posts={posts} />
           <Pagination
             section={blog_folder}
             totalPages={totalPages}
