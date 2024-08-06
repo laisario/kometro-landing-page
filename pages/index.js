@@ -26,8 +26,8 @@ const Home = ({ frontmatter }) => {
         <div className="container">
           <div className="row text-center">
             <div className="mx-auto lg:col-10">
-              <h1 className="font-primary font-bold">{banner.title}</h1>
-              <p className="mt-4">{markdownify(banner.content)}</p>
+              <h1 className="font-primary font-bold">{banner?.title}</h1>
+              <p className="mt-4">{markdownify(banner?.content)}</p>
               <YoutubePlayer id="cHrrdmRuwpM" title='Exemplo de video' autoplay />
             </div>
           </div>
@@ -40,7 +40,7 @@ const Home = ({ frontmatter }) => {
       >
         <div className="container">
           <div className="text-center mb-8">
-            <h2>{markdownify(service.title)}</h2>
+            <h2>{markdownify(service?.title)}</h2>
           </div>
           <Swiper
             slidesPerView={1}
@@ -57,7 +57,7 @@ const Home = ({ frontmatter }) => {
             modules={[Autoplay, Pagination, Navigation]}
             className="bg-white rounded-lg shadow-lg "
           >
-            {service.services.map((service, index) => {
+            {service?.services?.map((service, index) => {
               const isOdd = index % 2 > 0;
 
               return <SwiperSlide>
@@ -87,10 +87,10 @@ const Home = ({ frontmatter }) => {
       <section className="section">
         <div className="container">
           <div className="text-center">
-            <h2>{markdownify(feature.title)}</h2>
+            <h2>{markdownify(feature?.title)}</h2>
           </div>
           <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-            {feature.features.map((item, i) => (
+            {feature?.features?.map((item, i) => (
               <div
                 className="feature-card rounded-xl bg-white p-5 pb-8 text-center"
                 key={`feature-${i}`}
@@ -108,7 +108,7 @@ const Home = ({ frontmatter }) => {
                   {markdownify(item.name, "h3", "h5")}
                   <p className="mt-3">{item.content}</p>
                 </div>
-                {item.button.enable && (
+                {item?.button?.enable && (
                   <Link
                     href={item?.button.link}
                     className="cta-link inline-flex items-center text-primary"
