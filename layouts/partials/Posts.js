@@ -6,7 +6,6 @@ import Link from "next/link";
 
 const Posts = ({ posts }) => {
   const { blog_folder, summary_length } = config.settings;
-  console.log(blog_folder, posts)
   return (
     <div className="section row pb-0">
       <div className="col-12 pb-12 lg:pb-24">

@@ -4,8 +4,8 @@ banner:
   content: Aqui na KOMETRO resolvemos as coisas da melhor forma, com muita eficia e preços acessiveis... 
   image: /images/banner-art.svg
   button:
-    label: "Contact Us"
-    link: "/contact"
+    label: "Entre em contato"
+    link: "/contato"
 
 # feature
 feature: 
@@ -53,7 +53,9 @@ feature:
       enable: true
       label: Saiba mais!
       link: /servicos
-
+  button:
+    label: Contrate nossos serviços!
+    link: /contato
 
 # services
 service:
