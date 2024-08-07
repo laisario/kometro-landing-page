@@ -7,7 +7,7 @@ import Image from "next/image";
 import { markdownify } from "@lib/utils/textConverter";
 import { useState } from "react";
 
-const topics = [
+const plans = [
   {
     title: 'Missão',
     image: mission,
@@ -31,7 +31,7 @@ const readMore = {
   "esg": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 }
 
-function Pricing({ data }) {
+function Integridade({ data }) {
   const [selectedOption, setSelectedOpion] = useState('')
   const {
     frontmatter: { title, plans, call_to_action },
@@ -42,16 +42,16 @@ function Pricing({ data }) {
         <div className="container">
           <h1 className="text-center font-normal">Nossos pilares</h1>
           <div className="section row -mt-10 justify-center md:mt-0">
-            {topics.map((topic, index) => (
+            {plans.map((plan, index) => (
               <div
-                className={`col-12 md:col-4 ${!topic.recommended ? "lg:px-0" : "col-recommended"
+                className={`col-12 md:col-4 ${!plan.recommended ? "lg:px-0" : "col-recommended"
                   }`}
-                key={topic.title + index}
+                key={plan.title + index}
               >
                 <div className="card text-center bg-white border border-gray-300 hover:scale-105 transform transition-transform duration-300 p-4">
-                  <h4>{topic.title}</h4>
+                  <h4>{plan.title}</h4>
                   <div className="mt-5 flex justify-center items-center">
-                    <Image src={topic.image} alt={topic.title} width={100} height={50} />
+                    <Image src={plan.image} alt={plan.title} width={100} height={50} />
                   </div>
                   <h5 className="mt-2 font-normal text-text">
                     Lorem yljdfsflbfejkbakjbflaf
@@ -60,7 +60,7 @@ function Pricing({ data }) {
                   </h5>
                   <button
                     className={"mt-5 bg-primary hover:bg-[#8F2807] text-white font-bold py-2 px-4 rounded transition-colors duration-300"}
-                    onClick={() => setSelectedOpion(topic.option)}
+                    onClick={() => setSelectedOpion(plan.option)}
                   >
                     Leia mais
                   </button>
@@ -77,4 +77,4 @@ function Pricing({ data }) {
   );
 }
 
-export default Pricing;
+export default Integridade;

@@ -1,6 +1,6 @@
 ---
-title: Pricing
-layout: pricing
+title: Integridade
+layout: integridade
 draft: false
 plans:
 - title: Basic Plan
