@@ -10,9 +10,9 @@
   },
 
   "settings": {
-    "pagination": 4,
-    "summary_length": 200,
-    "blog_folder": "servicos"
+    "pagination": 6,
+    "summary_length": 150,
+    "service_folder": "servicos"
   },
 
   "nav_button": {

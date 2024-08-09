@@ -19,6 +19,8 @@ import YoutubePlayer from "@layouts/components/YoutubePlayer";
 const Home = ({ frontmatter }) => {
   const { banner, feature, service, workflow, call_to_action } = frontmatter;
   const { title } = config.site;
+  const { service_folder } = config.settings;
+
 
   return (
     <Base title={title}>
@@ -114,7 +116,7 @@ const Home = ({ frontmatter }) => {
                 </div>
                 {item?.button?.enable && (
                   <Link
-                    href={item?.button.link}
+                    href={`/${service_folder}/${item?.button?.slug}`}
                     className="cta-link inline-flex items-center text-primary"
                   >
                     {item?.button.label}

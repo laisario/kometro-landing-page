@@ -1,151 +1,35 @@
 ---
 title: "Calibração"
 description: "Aliando tecnologia e competência, realizamos serviços de calibração em vários tipos de instrumentos de medição. Conheça nosso escopo: Dimensional e pressão, massa, temperatura e umidade."
-image: "/images/blog-4.jpg"
+image: "/images/calibracao.svg"
 date: 2022-08-04T05:00:00Z
 draft: false
 ---
 
+Aliando tecnologia e competência, realizamos serviços de calibração em vários tipos de instrumentos de medição. Conheça nosso escopo: Dimensional e pressão, massa, temperatura e umidade.
 
-Here is an example of headings. You can use this heading by the following markdown rules. For example: use `#` for heading 1 and use `######` for heading 6.
+#### O que é calibração?
 
-# Heading 1
+O Vocabulário Internacional de Metrologia (VIM) 2012, define calibração como: “Operação que estabelece, sob condições especificadas, numa primeira etapa, uma relação entre os valores e as incertezas de medição fornecidos por padrões e as indicações correspondentes com as incertezas associadas; numa segunda etapa, utiliza esta informação para estabelecer uma relação visando a obtenção dum resultado de medição a partir duma indicação.
 
-## Heading 2
+#### O certificado de calibração tem validade?
+A validade do certificado de calibração deve ser definida pelo cliente (proprietário do instrumento) com base em diversas informações, tais como:
 
-### Heading 3
+- Frequência de utilização, que deve levar em consideração: o manuseio, a severidade de uso, meio ambiente, etc;
+- Normas técnicas;
+- Recomendações de fabricante;
+- Entre outras situações;
 
-#### Heading 4
+Importante destacar que dois instrumentos com as mesmas características construtivas podem ter validades (intervalo de calibração) diferentes.
 
-##### Heading 5
+#### Em quais pontos o instrumento de medição deve ser calibrado?
 
-###### Heading 6
+Os pontos de calibração são definidos a partir de normas técnicas ou oriundas de documentação do **INMETRO**, bem como da utilização (necessidade) do cliente. Caso não sejam informados pelo cliente, o Laboratório da **Kometro** irá definir os pontos conforme a documentação interna.
 
----
+#### Por que devo calibrar meus instrumentos?
 
-##### Emphasis
+Segundo as normas de Qualidade **ISO 9001** (requisito 7.1.5.2) e a IATF 16949 (requisito 7.1.5.2), de Meio Ambiente **ISO 14001**(requisito 9.1.1) e de Segurança **ISO 45001** (requisito 9.1.1) os equipamentos utilizados para medição e monitoramento devem ser calibrados.
 
-The emphasis, aka italics, with _asterisks_ or _underscores_.
+#### A calibração conserta ou ajusta um instrumento de medição?
 
-Strong emphasis, aka bold, with **asterisks** or **underscores**.
-
-The combined emphasis with **asterisks and _underscores_**.
-
-Strikethrough uses two tildes. ~~Scratch this.~~
-
----
-
-##### Link
-
-[I'm an inline-style link](https://www.google.com)
-
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-[I'm a reference-style link][arbitrary case-insensitive reference text]
-
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.themefisher.com
-[1]: https://gethugothemes.com
-[link text itself]: https://www.getjekyllthemes.com
-
----
-
-##### Paragraph
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil. Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.
-
----
-
-##### Ordered List
-
-1. List item
-2. List item
-3. List item
-4. List item
-5. List item
-
----
-
-##### Unordered List
-
-- List item
-- List item
-- List item
-- List item
-- List item
-
----
-
-##### Code and Syntax Highlighting
-
-This is an `Inline code` sample.
-
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
-
-```python
-s = "Python syntax highlighting"
-print s
-```
-
----
-
-##### Blockquote
-
-> This is a blockquote example.
-
----
-
-##### Inline HTML
-
-You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
-
-<dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
-
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
-</dl>
-
----
-
-##### Tables
-
-| Tables        |      Are      |  Cool |
-| ------------- | :-----------: | ----: |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      |   centered    |   $12 |
-| zebra stripes |   are neat    |    $1 |
-
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the
-raw Markdown line up prettily. You can also use inline Markdown.
-
-| Markdown | Less      | Pretty     |
-| -------- | --------- | ---------- |
-| _Still_  | `renders` | **nicely** |
-| 1        | 2         | 3          |
-
----
-
-##### Images
-
-![service](/images/service-slide-1.png "service")
-
----
-
-##### Youtube video
-
-<YoutubePlayer id="C0DPdy98e4c" title="YouTube Video" />
+Não! Com a calibração o cliente identifica os erros de medição naquele exato instante, como se fosse uma “fotografia” do instrumento. Com as informações da calibração o cliente tem condições de avaliar como estava o desempenho do instrumento durante o período de uso anterior, possibilitando identificar falhas no seu processo de medição, podendo tomar decisões, como por exemplo: recalls. Neste caso é necessário realizar a manutenção, ou ajuste, do instrumento de medição e realizar uma nova calibração afim de identificar que os erros foram corrigidos.

@@ -12,47 +12,53 @@ feature:
   title: Nossos serviços
   features:
   - name: "Calibração"
-    icon: "/images/code.svg"
+    icon: "/images/calibracao.svg"
     content: "Serviços de calibração nas grandezas metrológicas focadas nas indústrias."
     button:
       enable: true
       label: Saiba mais!
       link: /servicos
+      slug: servico-5
   - name: "Gestão Metrológica"
-    icon: "/images/user-clock.svg"
+    icon: "/images/gestao.svg"
     content: "Gerenciamento metrológico dos instrumentos de medição e ensaio."
     button:
       enable: true
       label: Saiba mais!
       link: /servicos
+      slug: servico-4
   - name: "Consultoria"
-    icon: "/images/oop.svg"
+    icon: "/images/consultoria.svg"
     content: "Focadas na melhoria de desempenho do negócio de nossos clientes."
     button:
       enable: true
       label: Saiba mais!
       link: /servicos
+      slug: servico-3
   - name: "Auditoria"
-    icon: "/images/love.svg"
+    icon: "/images/auditoria.svg"
     content: "Serviços de auditorias baseados na Norma ISO 19011 pro experientes consultores."
     button:
       enable: true
       label: Saiba mais!
       link: /servicos
+      slug: servico-2
   - name: "Treinamento"
-    icon: "/images/speedometer.svg"
+    icon: "/images/treinamento.svg"
     content: "Professores qualificados e capacitados na área de metrologia e qualidade."
     button:
       enable: true
       label: Saiba mais!
       link: /servicos
+      slug: servico-1
   - name: "Vendas"
-    icon: "/images/cloud.svg"
+    icon: "/images/vendas.svg"
     content: "Revendedora autorizada de tradicionais marcas de instrumentos de medição."
     button:
       enable: true
       label: Saiba mais!
       link: /servicos
+      slug: servico-6
   button:
     label: Contrate nossos serviços!
     link: /contato
