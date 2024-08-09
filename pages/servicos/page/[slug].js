@@ -6,39 +6,39 @@ import { getListPage, getSinglePage } from "@lib/contentParser";
 import { parseMDX } from "@lib/utils/mdxParser";
 import { markdownify } from "@lib/utils/textConverter";
 import Posts from "@partials/Posts";
-const { blog_folder } = config.settings;
+const { service_folder } = config.settings;
 
 
-// blog pagination
-const BlogPagination = ({ postIndex, posts, currentPage, pagination }) => {
+const ServicePagination = ({ postIndex, posts, currentPage, pagination }) => {
   const indexOfLastPost = currentPage * pagination;
   const indexOfFirstPost = indexOfLastPost - pagination;
   const totalPages = Math.ceil(posts.length / pagination);
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
   const { frontmatter } = postIndex;
-  const { title } = frontmatter;
+  const { title, call_to_action } = frontmatter;
   return (
     <Base title={title}>
-      <section className="section">
-        <div className="container">
+      <div className="container">
+        <section className="section">
           {markdownify(frontmatter?.title, "h1", "h1 text-center font-normal text-[56px]")}
-          <Posts posts={posts} />
+          <Posts posts={currentPosts} />
           <Pagination
-            section={blog_folder}
+            section={service_folder}
             totalPages={totalPages}
             currentPage={currentPage}
           />
-        </div>
-      </section>
+        </section>
+        <Cta cta={call_to_action} />
+      </div>
     </Base>
   );
 };
 
-export default BlogPagination;
+export default ServicePagination;
 
-// get blog pagination slug
+// get service pagination slug
 export const getStaticPaths = () => {
-  const getAllSlug = getSinglePage(`content/${blog_folder}`);
+  const getAllSlug = getSinglePage(`content/${service_folder}`);
   const allSlug = getAllSlug.map((item) => item.slug);
   const { pagination } = config.settings;
   const totalPages = Math.ceil(allSlug.length / pagination);
@@ -58,15 +58,15 @@ export const getStaticPaths = () => {
   };
 };
 
-// get blog pagination content
+// get service pagination content
 export const getStaticProps = async ({ params }) => {
   const currentPage = parseInt((params && params.slug) || 1);
   const { pagination } = config.settings;
-  const posts = getSinglePage(`content/${blog_folder}`).sort(
+  const posts = getSinglePage(`content/${service_folder}`).sort(
     (post1, post2) =>
       new Date(post2.frontmatter.date) - new Date(post1.frontmatter.date)
   );
-  const postIndex = await getListPage(`content/${blog_folder}/_index.md`);
+  const postIndex = await getListPage(`content/${service_folder}/_index.md`);
   const mdxContent = await parseMDX(postIndex.content);
 
   return {

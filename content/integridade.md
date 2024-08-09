@@ -1,54 +1,39 @@
 ---
-title: Integridade
+title: Nossos pilares
 layout: integridade
 draft: false
 plans:
-- title: Basic Plan
+- title: Missão
   subtitle: Best For Small Individuals
-  price: 49
-  type: month
-  features:
-    - Express Service
-    - Customs Clearance
-    - Time-Critical Services
+  image: /images/mission.png
+  option: mission
   button:
-    label: Get started for free
+    label: Leia mais!
     link: "/contact"
 
-- title: Professional Plan
+- title: Visão e Valores
   subtitle: Best For Professionals
-  price: 69
-  type: month
+  image: /images/vision.png
+  option: vision
   recommended: true
-  features:
-    - Express Service
-    - Customs Clearance
-    - Time-Critical Services
-    - Cloud Service
-    - Best Dashboard
   button:
-    label: Get started
+    label: Leia mais!
     link: "/contact"
-
-- title: Business Plan
+- title: ESG
   subtitle: Best For Large Individuals
-  price: 99
-  type: month
-  features:
-    - Express Service
-    - Customs Clearance
-    - Time-Critical Services
+  image: /images/values.png
+  option: esg
   button:
-    label: Get started
+    label: Leia mais!
     link: "/contact"
 
 call_to_action:
-  title: Need a larger plan?
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur.
+  title: Gostou dos nossos pilares?
+  content: Entre em contato se tiver alguma dúvida!
   image: '/images/cta.svg'
   button:
     enable: true
-    label: "Contact Us"
-    link: "/contact"
+    label: "Fale conosco!"
+    link: "/contato"
     
 ---

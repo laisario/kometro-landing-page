@@ -14,7 +14,7 @@ const PostSingle = ({ frontmatter, content, mdxContent }) => {
         <div className="container">
           <div className="row">
             <article className="col-12 mx-auto text-center md:col-8">
-              {image && (
+              {/* {image && (
                 <Image
                   src={image}
                   height="500"
@@ -24,8 +24,17 @@ const PostSingle = ({ frontmatter, content, mdxContent }) => {
                   layout="responsive"
                   className="rounded-lg"
                 />
-              )}
-              {markdownify(title, "h1", "h2 mb-6 mt-6 text-left")}
+              )} */}
+              <div className="flex items-center">
+                <Image
+                  className="rounded-lg"
+                  src={image}
+                  alt={title}
+                  width={"30"}
+                  height={"30"}
+                />
+                {markdownify(title, "h1", "h2 ml-2 mb-6 mt-6 text-left")}
+              </div>
 
               <div className="content mb-16 text-left">
                 <MDXRemote {...mdxContent} components={shortcodes} />
