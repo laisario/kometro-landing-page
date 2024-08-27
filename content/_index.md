@@ -8,9 +8,9 @@ banner:
     link: "/contato"
 
 # service
-feature: 
+service: 
   title: Nossos serviços
-  features:
+  services:
   - name: "Calibração"
     icon: "/images/calibracao.svg"
     content: "Serviços de calibração nas grandezas metrológicas focadas nas indústrias."
@@ -27,7 +27,7 @@ feature:
       label: Saiba mais!
       link: /servicos
       slug: servico-4
-  - name: "Consultoria"
+  - name: "Consultoria e auditoria"
     icon: "/images/consultoria.svg"
     content: "Focadas na melhoria de desempenho do negócio de nossos clientes."
     button:
@@ -35,33 +35,30 @@ feature:
       label: Saiba mais!
       link: /servicos
       slug: servico-3
-  - name: "Auditoria"
-    icon: "/images/auditoria.svg"
-    content: "Serviços de auditorias baseados na Norma ISO 19011 pro experientes consultores."
-    button:
-      enable: true
-      label: Saiba mais!
-      link: /servicos
-      slug: servico-2
-  - name: "Treinamento"
-    icon: "/images/treinamento.svg"
-    content: "Professores qualificados e capacitados na área de metrologia e qualidade."
-    button:
-      enable: true
-      label: Saiba mais!
-      link: /servicos
-      slug: servico-1
-  - name: "Vendas"
-    icon: "/images/vendas.svg"
-    content: "Revendedora autorizada de tradicionais marcas de instrumentos de medição."
-    button:
-      enable: true
-      label: Saiba mais!
-      link: /servicos
-      slug: servico-6
-  button:
-    label: Contrate nossos serviços!
-    link: /contato
+  # - name: "Auditoria"
+  #   icon: "/images/auditoria.svg"
+  #   content: "Serviços de auditorias baseados na Norma ISO 19011 pro experientes consultores."
+  #   button:
+  #     enable: true
+  #     label: Saiba mais!
+  #     link: /servicos
+  #     slug: servico-2
+  # - name: "Treinamento"
+  #   icon: "/images/treinamento.svg"
+  #   content: "Professores qualificados e capacitados na área de metrologia e qualidade."
+  #   button:
+  #     enable: true
+  #     label: Saiba mais!
+  #     link: /servicos
+  #     slug: servico-1
+  # - name: "Vendas"
+  #   icon: "/images/vendas.svg"
+  #   content: "Revendedora autorizada de tradicionais marcas de instrumentos de medição."
+  #   button:
+  #     enable: true
+  #     label: Saiba mais!
+  #     link: /servicos
+  #     slug: servico-6
 
 # history
 timeline:
@@ -104,3 +101,67 @@ timeline:
     content: "Após passar pelo processo de avaliação da Coordenação Geral de Acreditação do INMETRO a RKP obteve êxito e conseguiu ampliar o seu escopo de serviços de calibração acreditado."
     image: "/images/escopo-mobile.png"
     year: 2020
+
+call_to_action:
+  title: Confira nossas acreditações!
+  content: Frase que o felipe vai passar
+  image: '/images/selo-acreditado-inmetro.png'
+  button:
+    enable: true
+    label: "Ir para site do inmetro"
+    link: "http://autodiscoverredirect.inmetro.gov.br/laboratorios/rbc/lista_laboratorios.asp?acao=consulta"
+
+videos:
+- src: videos/audio-1.MOV
+- src: videos/medicao.MOV
+- src: videos/pilula-3.MOV
+- src: videos/pilula-5.MOV
+
+pillars:
+  title: Nossos pilares
+  layout: integridade
+  draft: false
+  plans:
+  - title: Objetivo
+    subtitle: Best For Small Individuals
+    image: /images/mission.png
+    option: mission
+    button:
+      label: Leia mais!
+      link: "/contact"
+    content: 
+    - text: Ser uma empresa de serviços reconhecida na região do Sul Fluminense pela excelência dos serviços prestados.
+
+  - title: Visão e Valores
+    subtitle: Best For Professionals
+    image: /images/vision.png
+    option: vision
+    recommended: true
+    button:
+      label: Leia mais!
+      link: "/contact"
+    content:
+    - text: Estabelecer relações com respeito, comprometimento, transparência e imparcialidade.
+    - text: Buscar sempre qualidade e inovação
+    - text: Ter compromisso socioambiental.
+    - text: Valorizar as relações profissionais com os nossos clientes.
+    - text: Qualificar os colaboradores na busca pela excelência.
+
+  - title: ESG
+    subtitle: Best For Large Individuals
+    image: /images/values.png
+    option: esg
+    button:
+      label: Leia mais!
+      link: "/contact"
+    
+
+  call_to_action:
+    title: Quer conhecer nosso manual de conduta?
+    content: Nao fique na duvida! Baixe agora e leia!
+    image: '/images/contact-us.avif'
+    button:
+      enable: true
+      label: "Baixar manual"
+      link: "/contato"
+      

@@ -13,12 +13,16 @@ import 'swiper/css/navigation';
 import { getListPage } from "../lib/contentParser";
 import Player from "@layouts/components/Player";
 import Timeline from "@layouts/components/Timeline";
+import Cta from "@layouts/components/Cta";
+import Services from "@layouts/components/Services";
+import History from "@layouts/components/History";
+import Pillars from "@layouts/components/Pillars";
+import Clients from "@layouts/components/Clients";
 
 
 const Home = ({ frontmatter }) => {
-  const { banner, feature, timeline } = frontmatter;
+  const { banner, service, timeline, call_to_action, videos, pillars } = frontmatter;
   const { title } = config.site;
-  const { service_folder } = config.settings;
 
   return (
     <Base title={title}>
@@ -33,56 +37,21 @@ const Home = ({ frontmatter }) => {
       </section>
 
 
-      <section
-        className="section flex flex-col items-center text-center"
-      >
-        <div className="mb-2">
-          <h2>{markdownify(timeline?.title)}</h2>
-        </div>
-        <img src={timeline?.image} alt="Timeline história Kometro" />
-
-
-        <Timeline periods={timeline?.periods} />
+      <section className="section flex flex-col items-center text-center">
+       <History timeline={timeline}/>
       </section>
 
 
       <section className="section">
-        <div className="text-center">
-          <h2>{markdownify(feature?.title)}</h2>
-        </div>
-        <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-          {feature?.features?.map((item, i) => (
-            <div
-              className="feature-card rounded-xl bg-white shadow-2xl p-5 pb-8 text-center"
-              key={`feature-${i}`}
-            >
-              {item.icon && (
-                <Image
-                  className="mx-auto"
-                  src={item.icon}
-                  width={30}
-                  height={30}
-                  alt=""
-                />
-              )}
-              <div className="mt-4">
-                {markdownify(item.name, "h3", "h5")}
-                <p className="mt-3">{item.content}</p>
-              </div>
-              {item?.button?.enable && (
-                <Link
-                  href={`/${service_folder}/${item?.button?.slug}`}
-                  className="cta-link inline-flex items-center text-primary"
-                >
-                  {item?.button.label}
-                </Link>
-              )}
-            </div>
-          ))}
-        </div>
-        <div className="text-center mt-8">
-          <a href={feature?.button?.link} className="btn btn-primary mt-[20px] mb-[20px]">{feature?.button?.label}</a>
-        </div>
+        <Services service={service} cta={call_to_action} videos={videos} />
+      </section>
+
+      <section className="section">
+        <Pillars pillars={pillars}/>
+      </section>
+
+      <section className="section">
+        <Clients />
       </section>
     </Base>
   );

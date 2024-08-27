@@ -15,7 +15,7 @@ const Player = ({ videoSrc, autoplay = false, ...others }) => {
   }, []);
   return (
       <video
-        style={{ maxWidth: "100%", width: "1000px", margin: "0 auto" }}
+        style={{ maxWidth: "100%", width: "1000px", margin: "0 auto", borderRadius: "8px" }}
         playsInline
         loop
         muted

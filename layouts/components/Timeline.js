@@ -8,11 +8,12 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper';
 
 function Timeline({ periods }) {
-    console.log(periods)
     return (
         <Swiper
+            grabCursor={true}
             navigation={true}
             pagination={true}
+            spaceBetween={10}
             modules={[Navigation, Pagination]}
             className="md:w-[100%] lg:none"
             style={{

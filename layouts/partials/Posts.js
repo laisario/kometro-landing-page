@@ -12,9 +12,6 @@ const Posts = ({ posts, frontmatter }) => {
     <div className="section row pb-0">
       <div className="col-12 pb-12 lg:pb-24">
         <div className="row items-center">
-          <div className="col-12 md:col-6">
-            <CarouselVideo videos={frontmatter?.videos} />
-          </div>
           <div className="col-12 md:col-6 text-center">
             <h2 className="h3 mb-2 mt-4">
               {frontmatter?.subtitle}

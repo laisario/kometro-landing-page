@@ -10,7 +10,7 @@
   },
 
   "settings": {
-    "pagination": 6,
+    "pagination": 4,
     "summary_length": 150,
     "service_folder": "servicos"
   },
