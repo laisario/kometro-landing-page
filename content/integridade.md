@@ -10,6 +10,8 @@ plans:
   button:
     label: Leia mais!
     link: "/contact"
+  content: 
+  - text: Ser uma empresa de serviços reconhecida na região do Sul Fluminense pela excelência dos serviços prestados.
 
 - title: Visão e Valores
   subtitle: Best For Professionals
@@ -19,6 +21,13 @@ plans:
   button:
     label: Leia mais!
     link: "/contact"
+  content:
+  - text: Estabelecer relações com respeito, comprometimento, transparência e imparcialidade.
+  - text: Buscar sempre qualidade e inovação
+  - text: Ter compromisso socioambiental.
+  - text: Valorizar as relações profissionais com os nossos clientes.
+  - text: Qualificar os colaboradores na busca pela excelência.
+
 - title: ESG
   subtitle: Best For Large Individuals
   image: /images/values.png
@@ -26,11 +35,12 @@ plans:
   button:
     label: Leia mais!
     link: "/contact"
+  
 
 call_to_action:
   title: Gostou dos nossos pilares?
   content: Entre em contato se tiver alguma dúvida!
-  image: '/images/cta.svg'
+  image: '/images/contact-us.avif'
   button:
     enable: true
     label: "Fale conosco!"

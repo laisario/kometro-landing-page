@@ -91,7 +91,7 @@ const Base = ({
       </Head>
       <Header />
       {/* main site */}
-      <main>{children}</main>
+      <main className="container">{children}</main>
       <Footer />
     </>
   );

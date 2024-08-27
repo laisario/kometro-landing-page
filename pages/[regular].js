@@ -2,7 +2,6 @@ import NotFound from "@layouts/404";
 import Base from "@layouts/Baseof";
 import Contato from "@layouts/Contato";
 import Default from "@layouts/Default";
-import Faq from "@layouts/Faq";
 import Integridade from "@layouts/Integridade";
 import { getRegularPage, getSinglePage } from "@lib/contentParser";
 
@@ -27,8 +26,6 @@ const RegularPages = ({ data }) => {
         <Contato data={data} />
       ) : layout === "integridade" ? (
         <Integridade data={data} />
-      ) : layout === "faq" ? (
-        <Faq data={data} />
       ) : (
         <Default data={data} />
       )}

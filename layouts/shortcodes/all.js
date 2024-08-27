@@ -1,4 +1,4 @@
-import YoutubePlayer from "../components/YoutubePlayer";
+import YoutubePlayer from "../components/Player";
 import Button from "./Button";
 
 const shortcodes = {

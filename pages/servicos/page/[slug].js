@@ -21,7 +21,7 @@ const ServicePagination = ({ postIndex, posts, currentPage, pagination }) => {
       <div className="container">
         <section className="section">
           {markdownify(frontmatter?.title, "h1", "h1 text-center font-normal text-[56px]")}
-          <Posts posts={currentPosts} />
+          <Posts posts={currentPosts} frontmatter={frontmatter} />
           <Pagination
             section={service_folder}
             totalPages={totalPages}

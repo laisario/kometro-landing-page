@@ -1,86 +1,53 @@
-import { markdownify } from "@lib/utils/textConverter";
 import Cta from "./components/Cta";
 import Image from "next/image";
-import { useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectFlip, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/effect-flip';
+import 'swiper/css/pagination';
 
-const pillarsTitle = {
-  mission: "Missão",
-  vission: "Visão e valores",
-  esg: "ESG"
-}
-
-const pillarsText = {
-  mission: "Texto completo sobre a Missão",
-  vission: "Texto completo sobre a Visão e valores",
-  esg: "Texto completo sobre a ESG"
-}
 
 
 function Integridade({ data }) {
-  const [selectedOption, setSelectedOption] = useState('')
   const {
     frontmatter: { title, plans, call_to_action },
   } = data;
+  console.log(plans)
   return (
     <>
-      <div className="container">
-        <section className="section pb-0">
-          <h1 className="text-center font-normal">{title}</h1>
-          <div className="section row -mt-10 justify-center md:mt-0">
-            {plans.map((plan, index) => (
-              <div
-                className="col-12 md:col-4 lg:px-0"
-                key={plan.title + index}
-              >
-                <div className="card text-center bg-white border border-gray-300 hover:scale-105 transform transition-transform duration-300 p-4">
-                  <h4>{plan.title}</h4>
-                  <div className="mt-5 flex justify-center items-center">
-                    <Image src={plan.image} alt={plan.title} width={100} height={50} />
-                  </div>
-                  {/* <h5 className="mt-2 font-normal text-text">
-                    {plan?.subtitle}
-                  </h5> */}
-                  <button
-                    className={"mt-5 bg-primary hover:bg-[#8F2807] text-white font-bold py-2 px-4 rounded transition-colors duration-300"}
-                    onClick={() => setSelectedOption(plan.option)}
-                  >
-                    Leia mais
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-        {!!selectedOption && (
-          <div className="relative bg-gray-200 p-6 rounded-lg shadow-2xl w-full  mx-auto">
-            <h2 className="text-xl font-bold mb-4">
-              {selectedOption === 'mission' ? 'Missão' : selectedOption === 'vision' ? 'Visão' : 'Valores e ESG'}
-            </h2>
-            <p>
-              {selectedOption === 'mission' && 'Texto completo sobre a missão.'}
-              {selectedOption === 'vision' && 'Texto completo sobre a visão.'}
-              {selectedOption === 'esg' && 'Texto completo sobre os valores e ESG.'}
-            </p>
-          </div>
-        )}
-        {!!selectedOption && (
-          <div className="col-12 mt-6 md:col-8 center">
-            <div className="p-12 shadow-2xl">
-              <button
-                // className="absolute top-2 right-2 p-2 rounded"
-                onClick={() => setSelectedOption('')}
-              >
-                X
-              </button>
-              <div className="faq-head relative">
-                {markdownify(pillarsTitle[selectedOption], "h4")}
-              </div>
-              {markdownify(pillarsText[selectedOption], "p", "faq-body mt-4")}
-            </div>
-          </div>
-        )}
-        <Cta cta={call_to_action} />
-      </div>
+      <section className="section">
+        <h1 className="text-center font-normal mb-8">{title}</h1>
+        <div
+          className="flex flex-col md:flex-row justify-between w-full"
+        >
+          {plans.map((plan, index) => (
+            <Swiper
+              grabCursor={true}
+              effect={'flip'}
+              pagination={true}
+              modules={[EffectFlip, Pagination]}
+              className="w-[80%] md:w-[30%] h-auto min-h-[400px] hover:scale-105 transform transition-transform duration-300"
+              style={{
+                "--swiper-pagination-bullet-size": "10px",
+                "--swiper-theme-color": "#FD7622",
+              }}
+              key={plan.title + index}
+            >
+              <SwiperSlide className="card text-center bg-white border border-gray-300 p-4 flex flex-col justify-evenly items-center py-32">
+                <h4>{plan.title}</h4>
+                <Image src={plan.image} alt={plan.title} width={100} height={50} />
+              </SwiperSlide>
+              <SwiperSlide className="card  border border-gray-300 p-4 flex flex-col px-12">
+                <h4 className="mb-4 text-center">{plan.title}</h4>
+                <ul className="list-disc list-inside mb-8">
+                  {plan?.content?.map(({ text }, i) => <li key={text + i}><code>{text}</code></li>)}
+                </ul>
+              </SwiperSlide>
+            </Swiper>
+          ))}
+        </div>
+      </section>
+      <Cta cta={call_to_action} />
     </>
   );
 }
