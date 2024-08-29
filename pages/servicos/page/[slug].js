@@ -15,20 +15,12 @@ const ServicePagination = ({ postIndex, posts, currentPage, pagination }) => {
   const totalPages = Math.ceil(posts.length / pagination);
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
   const { frontmatter } = postIndex;
-  const { title, call_to_action } = frontmatter;
+  const { title } = frontmatter;
   return (
     <Base title={title}>
       <div className="container">
-        <section className="section">
-          {markdownify(frontmatter?.title, "h1", "h1 text-center font-normal text-[56px]")}
-          <Posts posts={currentPosts} frontmatter={frontmatter} />
-          <Pagination
-            section={service_folder}
-            totalPages={totalPages}
-            currentPage={currentPage}
-          />
-        </section>
-        <Cta cta={call_to_action} />
+        {markdownify(title, "h1", "h1 text-center font-normal text-[56px]")}
+        <Posts posts={currentPosts} frontmatter={frontmatter} />
       </div>
     </Base>
   );

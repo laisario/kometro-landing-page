@@ -2,16 +2,16 @@ import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import Link from "next/link";
 
-function Cta({ cta }) {
+function Cta({ cta, width  = 150 , height = 150, download = false }) {
   return (
-    <section className="section my-16 rounded-xl shadow-2xl">
+    <section className="section bg-[#F5F5F5] my-16 rounded-xl shadow-lg bg-white border border-transparent">
       <div className="row mx-auto items-center justify-center flex-col md:flex-row">
-        <div className="md:col-5 lg:col-4 flex justify-center">
+        <div className="md:col-5 lg:col-4 flex justify-center w-full">
           <Image
             src={cta?.image}
             alt="call to action image"
-            width={150}
-            height={50}
+            width={width}
+            height={height}
           />
         </div>
         <div className="mt-5 text-center md:mt-0 md:text-left md:col-6 lg:col-5">
@@ -21,6 +21,7 @@ function Cta({ cta }) {
             className="btn btn-primary mt-4"
             href={cta?.button?.link}
             target="_blank"
+            download={download}
           >
             {cta?.button?.label}
           </Link>

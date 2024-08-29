@@ -7,7 +7,6 @@ banner:
     label: "Entre em contato"
     link: "/contato"
 
-# service
 service: 
   title: Nossos serviços
   services:
@@ -18,7 +17,7 @@ service:
       enable: true
       label: Saiba mais!
       link: /servicos
-      slug: servico-5
+      slug: servico-1
   - name: "Gestão Metrológica"
     icon: "/images/gestao.svg"
     content: "Gerenciamento metrológico dos instrumentos de medição e ensaio."
@@ -26,7 +25,7 @@ service:
       enable: true
       label: Saiba mais!
       link: /servicos
-      slug: servico-4
+      slug: servico-2
   - name: "Consultoria e auditoria"
     icon: "/images/consultoria.svg"
     content: "Focadas na melhoria de desempenho do negócio de nossos clientes."
@@ -35,30 +34,7 @@ service:
       label: Saiba mais!
       link: /servicos
       slug: servico-3
-  # - name: "Auditoria"
-  #   icon: "/images/auditoria.svg"
-  #   content: "Serviços de auditorias baseados na Norma ISO 19011 pro experientes consultores."
-  #   button:
-  #     enable: true
-  #     label: Saiba mais!
-  #     link: /servicos
-  #     slug: servico-2
-  # - name: "Treinamento"
-  #   icon: "/images/treinamento.svg"
-  #   content: "Professores qualificados e capacitados na área de metrologia e qualidade."
-  #   button:
-  #     enable: true
-  #     label: Saiba mais!
-  #     link: /servicos
-  #     slug: servico-1
-  # - name: "Vendas"
-  #   icon: "/images/vendas.svg"
-  #   content: "Revendedora autorizada de tradicionais marcas de instrumentos de medição."
-  #   button:
-  #     enable: true
-  #     label: Saiba mais!
-  #     link: /servicos
-  #     slug: servico-6
+  
 
 # history
 timeline:
@@ -66,7 +42,7 @@ timeline:
   image: images/timeline.png
   periods:
   - title: "Fundação"
-    content: "Os sócios fundadores da RKP identificaram uma oportunidade de mercado na área de consultoria em Sistema de Gestão. A partir disto iniciaram as atividades e no primeiro ano conseguiram o primeiro contrato com uma multinacional americana na área de lubrificantes. Naquele ano iniciava o serviço de consultoria em Sistema de Gestão da Qualidade (ISO 9001) e Qualidade Automotiva (ISO TS 16949)."
+    content: "Consolidando-se inicialmente com consultoria e assessoria nas áreas de  Qualidade e Metrologia"
     image: "/images/fundacao-mobile.png"
     year: 2011
   - title: "Consultoria"
@@ -74,38 +50,43 @@ timeline:
     image: "/images/consultoria-mobile.png"
     year: 2011
   - title: "Gestão metrológica"
-    content: "Sempre atentos ao mercado, os sócios iniciaram o serviço de gestão metrológica. Como primeiro contrato tiveram o desafio de gerenciar em torno de 3 mil instrumentos em duas plantas de produção."
+    content: "Primeiro desafio:  Gerenciar em torno de 3 mil instrumentos em duas plantas de produção."
     image: "/images/gestao-mobile.png"
     year: 2013
-  - title: "Metrologia"
-    content: "Após alguns estudos de mercado na região Sul Fluminense, os sócios iniciaram um novo desafio, a abertura de um laboratório de metrologia."
+  - title: "Laboratório de Metrologia"
+    content: "Iniciou-se o laboratório rastreável de dimensional."
     image: "/images/metrologia-mobile.png"
     year: 2015
   - title: "Novas instalações"
-    content: "Após o início do laboratório de metrologia, os sócios identificaram que precisavam crescer. Com essa necessidade reconhecida foi iniciada a parceria com a Prefeitura de Pinheiral, onde foi realizada uma cessão de direito de uma área para a construção das novas instalações da RKP."
+    content: "Parceria com a Prefeitura de Pinheiral para ampliação das instalações."
     image: "/images/instalacoes-mobile.png"
     year: 2016
-  - title: "Proficiência"
-    content: "Com o objetivo de sempre atender as necessidades do mercado, a RKP após prover diversos Ensaios de Proficiências(EP) em menor escala, aceitou o desafio de ofertar aos Organismos de Inspeção (OIs) um programa de EP, onde participara quase OIs no primeiro programa."
-    image: "/images/proeficiencia-mobile.png"
-    year: 2017
-  - title: "Acreditado"
-    content: "Buscando sempre a melhoria contínua e a confiabilidade dos serviços prestados, resolvemos nos desafiar ainda mais, e buscamos junto à Coordenação Geral de Acreditação do INMETRO a acreditação na ISO IEC 17025:2017 (escopo Dimensional)."
+  - title: "Acreditação"
+    content: "Acreditação pela CGCRE/INMETRO na norma ABNT NBR ISO/IEC 17025 para calibração sob número 0686."
     image: "/images/acreditado.png"
     year: 2018
-  - title: "Ampliação"
-    content: "Os investimentos não pararam, mesmo em meio toda a instabilidade política e econômica do país, a RKP seguiu ampliando suas instalações como parte de um projeto ainda maior – Instalação de novos laboratórios de metrologia."
-    image: "/images/ampliacao.png"
-    year: 2019
-  - title: "Novo Escopo"
-    content: "Após passar pelo processo de avaliação da Coordenação Geral de Acreditação do INMETRO a RKP obteve êxito e conseguiu ampliar o seu escopo de serviços de calibração acreditado."
+  - title: "Novo Escopo de Serviço"
+    content: "Aumento do escopo acreditato para massa, pressão, temperatura e umidade pela CGCRE/INMETRO na norma ABNT NBR ISO/IEC 17025 para calibração sob número 0686."
     image: "/images/escopo-mobile.png"
-    year: 2020
+    year: 2019
+  - title: "Gestão na Medida Certa"
+    content: "Desenvolvimento de serviço voltado para otimização de sistema de medição, buscando eficiência na gestão de instrumentos."
+    image: "/images/gestao-medida-mobile.png"
+    year: 2021
+  - title: "Sistema de Gerenciamento"
+    content: "Desenvolvimento de um sistema de gerenciamento metrológico"
+    image: "/images/sistema-mobile.png"
+    year: 2024
+  - title: "Nova identidade visual"
+    content: "Lançamento da marca KOMETRO"
+    image: "/images/identidade-mobile.png"
+    year: 2024
+  
 
 call_to_action:
   title: Confira nossas acreditações!
   content: Frase que o felipe vai passar
-  image: '/images/selo-acreditado-inmetro.png'
+  image: '/images/selo-acreditado-inmetro.jpg'
   button:
     enable: true
     label: "Ir para site do inmetro"
@@ -158,10 +139,27 @@ pillars:
 
   call_to_action:
     title: Quer conhecer nosso manual de conduta?
-    content: Nao fique na duvida! Baixe agora e leia!
-    image: '/images/contact-us.avif'
+    content: Não fique na dúvida! Baixe agora e leia!
+    image: '/images/manual-guide.png'
     button:
       enable: true
       label: "Baixar manual"
-      link: "/contato"
+      link: "/pdf_sample_2.pdf"
       
+client:
+  title: Conheça nossos clientes
+  clients:
+  - name: Abreu
+    image: /images/abreu-client.png
+  - name: Chevron
+    image: /images/chevron-client.png
+  - name: Cinbal
+    image: /images/cinbal-client.png
+  - name: Texaco
+    image: /images/texaco-client.png
+  - name: BMB
+    image: /images/bmb-client.png
+  - name: KVG
+    image: /images/kvg-client.png
+  - name: Abreu
+    image: /images/abreu-client.png

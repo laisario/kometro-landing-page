@@ -1,19 +1,12 @@
 import config from "@config/config.json";
 import Base from "@layouts/Baseof";
 import { markdownify } from "@lib/utils/textConverter";
-import Image from "next/image";
-import Link from "next/link";
-import { Autoplay, Pagination, Navigation, Scrollbar } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-// import { Pagination, Navigation } from 'swiper/modules';
 import "swiper/swiper.min.css";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { getListPage } from "../lib/contentParser";
 import Player from "@layouts/components/Player";
-import Timeline from "@layouts/components/Timeline";
-import Cta from "@layouts/components/Cta";
 import Services from "@layouts/components/Services";
 import History from "@layouts/components/History";
 import Pillars from "@layouts/components/Pillars";
@@ -21,7 +14,7 @@ import Clients from "@layouts/components/Clients";
 
 
 const Home = ({ frontmatter }) => {
-  const { banner, service, timeline, call_to_action, videos, pillars } = frontmatter;
+  const { banner, service, timeline, call_to_action, videos, pillars, client } = frontmatter;
   const { title } = config.site;
 
   return (
@@ -51,7 +44,7 @@ const Home = ({ frontmatter }) => {
       </section>
 
       <section className="section">
-        <Clients />
+        <Clients client={client} />
       </section>
     </Base>
   );

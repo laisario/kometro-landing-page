@@ -5,7 +5,8 @@
         "primary": "#FD7622",
         "body": "#fff",
         "border": "#FFA373",
-        "theme_light": "#DDDDDD"
+        "theme_light": "#DDDDDD",
+        "theme_light_second": "#F7F1ED"
       },
       "text_color": {
         "default": "#424242",

@@ -9,28 +9,24 @@ import Link from "next/link";
 const Posts = ({ posts, frontmatter }) => {
   const { service_folder, summary_length } = config.settings;
   return (
-    <div className="section row pb-0">
-      <div className="col-12 pb-12 lg:pb-24">
-        <div className="row items-center">
-          <div className="col-12 md:col-6 text-center">
-            <h2 className="h3 mb-2 mt-4">
-              {frontmatter?.subtitle}
-            </h2>
-            <p>
-              {frontmatter?.description}
-            </p>
-            <Link
-              className="btn btn-primary mt-4"
-              href="/contato"
-            >
-              Entre em contato
-            </Link>
-          </div>
-        </div>
+    <div className="section column">
+      <div className="">
+        <h2 className="h3 mb-2">
+          {frontmatter?.subtitle}
+        </h2>
+        <p>
+          {frontmatter?.description}
+        </p>
+        <Link
+          className="btn btn-primary mt-4"
+          href="/contato"
+        >
+          Entre em contato
+        </Link>
       </div>
-      {posts?.filter(({ slug }) => slug !== 'service-5')?.map((post, i) => (
-        <div key={`key-${i}`} className="col-12 mb-8 sm:col-6 lg:col-6">
-          <div className="flex items-center">
+      <div className="section flex flex-col lg:flex-row gap-y-10 lg:gap-x-8">
+        {posts?.filter(({ slug }) => slug !== 'service-5')?.map((post, i) => (
+          <div key={`key-${i}`} className="bg-[#F5F5F5] flex flex-col items-center justify-evenly col-12 lg:col-4 rounded-xl shadow-lg p-8 text-center ">
             <Image
               className="rounded-lg"
               src={post?.frontmatter?.image}
@@ -38,27 +34,23 @@ const Posts = ({ posts, frontmatter }) => {
               width={"30"}
               height={"30"}
             />
-            <h2 className="mb-0 ml-4">
-              {post?.frontmatter?.title}
-            </h2>
-          </div>
-          <p className="text-text">
-            {plainify(
-              post.content?.slice(0, Number(summary_length)),
-              "div"
-            )}...
-          </p>
-          <div className="flex justify-end mt-4">
+            <h3>{post?.frontmatter?.title}</h3>
+            <p className="text-text">
+              {plainify(
+                post.content?.slice(0, Number(summary_length)),
+                "div"
+              )}...
+            </p>
             <Link
-              className="btn btn-small btn-outline-primary"
+              className="text-[#FD7622] hover:text-[#FFA373]"
               href={`/${service_folder}/${post.slug}`}
               rel=""
             >
-              Leia mais
+              Saiba mais
             </Link>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

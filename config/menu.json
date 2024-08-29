@@ -5,16 +5,17 @@
       "url": "/"
     },
     {
-      "name": "Integridade",
-      "url": "/integridade"
-    },
-    {
       "name": "Serviços",
       "url": "/servicos"
     },
     {
       "name": "Fale conosco",
       "url": "/contato"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Encarregado LGPD"
     }
   ]
 }

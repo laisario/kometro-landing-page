@@ -5,16 +5,20 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import { Navigation, Pagination } from 'swiper';
+import { Autoplay, Pagination } from 'swiper';
 
 function Timeline({ periods }) {
     return (
         <Swiper
-            grabCursor={true}
-            navigation={true}
-            pagination={true}
-            spaceBetween={10}
-            modules={[Navigation, Pagination]}
+            pagination={{
+                clickable: true,
+              }}
+            autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+            loop={true}
+            modules={[Pagination, Autoplay]}
             className="md:w-[100%] lg:none"
             style={{
                 "--swiper-pagination-bullet-size": "10px",

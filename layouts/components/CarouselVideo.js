@@ -5,7 +5,7 @@ import 'swiper/css/effect-cards';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { Navigation } from 'swiper';
+import { Autoplay, Navigation } from 'swiper';
 import Player from './Player';
 
 
@@ -18,10 +18,10 @@ function CarouselVideo({ videos }) {
             spaceBetween={30}
             loop={true}
             autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
+                delay: 5000,
+                disableOnInteraction: true,
               }}
-            modules={[Navigation]}
+            modules={[Autoplay, Navigation]}
             style={{
                 "--swiper-pagination-bullet-size": "10px",
                 "--swiper-theme-color": "#FD7622",

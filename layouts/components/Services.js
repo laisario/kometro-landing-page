@@ -14,14 +14,14 @@ function Services({ service, cta, videos }) {
             <div className="text-center mb-16">
                 <h2>{markdownify(service?.title)}</h2>
             </div>
-            <div className="flex flex-col lg:flex-row gap-y-6 justify-center items-start">
-                <div className="col-12 md:col-5 flex justify-center items-center">
+            <div className="flex flex-col md:flex-row gap-y-6 justify-center items-start">
+                <div className="col-12 md:col-6 lg:col-5 flex justify-center items-center">
                     <CarouselVideo videos={videos} />
                 </div>
-                <div className="flex flex-col gap-y-10 justify-start items-center">
+                <div className="flex flex-col gap-y-10 justify-start items-end">
                     {service?.services?.map((item, i) => (
                         <div
-                            className="rounded-xl bg-white shadow-2xl p-8 text-center col-12 md:col-10"
+                            className="rounded-xl bg-[#F5F5F5] shadow-lg p-8 text-center col-12 md:col-10 bg-white border border-transparent"
                             key={`service-${i}`}
                         >
                             {item.icon && (

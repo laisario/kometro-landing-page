@@ -2,7 +2,7 @@ import NotFound from "@layouts/404";
 import Base from "@layouts/Baseof";
 import Contato from "@layouts/Contato";
 import Default from "@layouts/Default";
-import Integridade from "@layouts/Integridade";
+import Lgpd from "@layouts/Lgpd";
 import { getRegularPage, getSinglePage } from "@lib/contentParser";
 
 // for all regular pages
@@ -24,11 +24,10 @@ const RegularPages = ({ data }) => {
         <NotFound data={data} />
       ) : layout === "contato" ? (
         <Contato data={data} />
-      ) : layout === "integridade" ? (
-        <Integridade data={data} />
-      ) : (
-        <Default data={data} />
-      )}
+      ) : layout === "lgpd" ? (
+        <Lgpd data={data} />
+      ) :
+      (<Default data={data} />)}
     </Base>
   );
 };
