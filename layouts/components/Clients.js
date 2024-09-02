@@ -13,6 +13,7 @@ function Clients({ client }) {
       </div>
       <Swiper
         slidesPerView={3}
+        spaceBetween={50}
         modules={[Scrollbar]}
         scrollbar={{ draggable: true }}
       >
