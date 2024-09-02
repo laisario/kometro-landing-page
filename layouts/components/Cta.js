@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function Cta({ cta, width  = 150 , height = 150, download = false }) {
   return (
-    <section className="section bg-[#F5F5F5] my-16 rounded-xl shadow-lg bg-white border border-transparent">
+    <section className="section bg-[#F5F5F5] my-16 rounded-xl shadow-lg border border-transparent">
       <div className="row mx-auto items-center justify-center flex-col md:flex-row">
         <div className="md:col-5 lg:col-4 flex justify-center w-full">
           <Image

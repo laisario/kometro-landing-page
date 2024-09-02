@@ -21,7 +21,7 @@ function Services({ service, cta, videos }) {
                 <div className="flex flex-col gap-y-10 justify-start items-end">
                     {service?.services?.map((item, i) => (
                         <div
-                            className="rounded-xl bg-[#F5F5F5] shadow-lg p-8 text-center col-12 md:col-10 bg-white border border-transparent"
+                            className="rounded-xl bg-[#F5F5F5] shadow-lg p-8 text-center col-12 md:col-10 border border-transparent"
                             key={`service-${i}`}
                         >
                             {item.icon && (

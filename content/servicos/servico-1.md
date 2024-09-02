@@ -1,35 +1,40 @@
 ---
 title: "Calibração"
 description: "Aliando tecnologia e competência, realizamos serviços de calibração em vários tipos de instrumentos de medição. Conheça nosso escopo: Dimensional e pressão, massa, temperatura e umidade."
-image: "/images/calibracao.svg"
+image: "https://kometro.nyc3.cdn.digitaloceanspaces.com/landing-page/images/calibracao.svg"
 date: 2022-08-04T05:00:00Z
 draft: false
+call_to_action:
+  title: Confira nossas acreditações!
+  content: Nosso escopo acreditado pode ser consultado em
+  image: 'https://kometro.nyc3.cdn.digitaloceanspaces.com/landing-page/images/selo-acreditado-inmetro.jpg'
+  button:
+    enable: true
+    label: "Site do inmetro"
+    link: "http://autodiscoverredirect.inmetro.gov.br/laboratorios/rbc/lista_laboratorios.asp?acao=consulta"
 ---
 
-Aliando tecnologia e competência, realizamos serviços de calibração em vários tipos de instrumentos de medição. Conheça nosso escopo: Dimensional e pressão, massa, temperatura e umidade.
+Aliando tecnologia e competência, realizamos serviços de calibração em vários tipos de instrumentos de medição com objetivo de atender diversas demandas normativas, de requisitos de clientes, controle de qualidade, entre outras. 
 
-#### O que é calibração?
+### Nosso escopo
 
-O Vocabulário Internacional de Metrologia (VIM) 2012, define calibração como: “Operação que estabelece, sob condições especificadas, numa primeira etapa, uma relação entre os valores e as incertezas de medição fornecidos por padrões e as indicações correspondentes com as incertezas associadas; numa segunda etapa, utiliza esta informação para estabelecer uma relação visando a obtenção dum resultado de medição a partir duma indicação.
+##### Serviço de Calibração na Área de Dimensional: 
 
-#### O certificado de calibração tem validade?
-A validade do certificado de calibração deve ser definida pelo cliente (proprietário do instrumento) com base em diversas informações, tais como:
+- Paquímetro, Medidor de Altura, Micrômetro, Medidor Interno de 3 pontas, Escalas Graduadas, Trenas, Goniômetros, Esquadro, Relógio Comparador e Apalpador, Súbitos, Haste Padrão, Trena a Laser, Medições Lineares em Peças Diversas e Componentes, Medição de Forma, Posição e Orientação em Peças Diversas, Calibrador de Folga, Medidor de Espessura Camada Tinta Seca.
 
-- Frequência de utilização, que deve levar em consideração: o manuseio, a severidade de uso, meio ambiente, etc;
-- Normas técnicas;
-- Recomendações de fabricante;
-- Entre outras situações;
+##### Serviço de Calibração na Área de Pressão: 
+- Manômetros Analógicos e Digitais.
 
-Importante destacar que dois instrumentos com as mesmas características construtivas podem ter validades (intervalo de calibração) diferentes.
+##### Serviço de Calibração na Área de Temperatura:
+- Termo-higrômetro, Termômetro de Líquido em Vidro, Termômetro Mecânico, Medidor de Temperatura com Sensor Termopar, Medidor de Temperatura com Sensor Termorresistivo e Outros Sensores.
 
-#### Em quais pontos o instrumento de medição deve ser calibrado?
+##### Serviço de Calibração na Área de Massa:
+- Balanças.
 
-Os pontos de calibração são definidos a partir de normas técnicas ou oriundas de documentação do **INMETRO**, bem como da utilização (necessidade) do cliente. Caso não sejam informados pelo cliente, o Laboratório da **Kometro** irá definir os pontos conforme a documentação interna.
+##### Serviço de Calibração na Área de Volume:
+- Vidrarias, Microvolume.
 
-#### Por que devo calibrar meus instrumentos?
+##### Serviço de Calibração Rastreável:
+- Passa-não-passa, Medidores Internos (2 ou 3 pontas), Micrômetro de Profundidade, Transdutor de Pressão, Válvula de Segurança, Cronômetros, pHmetro, Viscosímetro Copo Ford, Durômetro Rockwell Bancada, Durômetro Shore A, Calibre de Solda, Refratômetros, Condutivímetro, Padrão de Espessura Camada Tinta Seca, Medidor de Espessura Com Relógios, Pressostato, Desempeno.
 
-Segundo as normas de Qualidade **ISO 9001** (requisito 7.1.5.2) e a IATF 16949 (requisito 7.1.5.2), de Meio Ambiente **ISO 14001**(requisito 9.1.1) e de Segurança **ISO 45001** (requisito 9.1.1) os equipamentos utilizados para medição e monitoramento devem ser calibrados.
 
-#### A calibração conserta ou ajusta um instrumento de medição?
-
-Não! Com a calibração o cliente identifica os erros de medição naquele exato instante, como se fosse uma “fotografia” do instrumento. Com as informações da calibração o cliente tem condições de avaliar como estava o desempenho do instrumento durante o período de uso anterior, possibilitando identificar falhas no seu processo de medição, podendo tomar decisões, como por exemplo: recalls. Neste caso é necessário realizar a manutenção, ou ajuste, do instrumento de medição e realizar uma nova calibração afim de identificar que os erros foram corrigidos.

@@ -12,20 +12,15 @@ function Clients({ client }) {
         <h2>{markdownify(client?.title)}</h2>
       </div>
       <Swiper
-        spaceBetween={30}
-        slidesPerView={5}
+        slidesPerView={3}
         modules={[Scrollbar]}
         scrollbar={{ draggable: true }}
-        style={{
-          "--swiper-theme-color": "#FD7622",
-      }}
       >
         {client?.clients?.map(({ name, image }, i) => (
-          <SwiperSlide key={name + i} className='flex flex-col justify-center items-center mb-16'>
-            <img src={image} alt={`Logo ${name}`} width="150px" height="150px" />
+          <SwiperSlide key={name + i} className='flex flex-col justify-center items-center mb-8'>
+            <img src={image} alt={`Logo ${name}`} width="120px" />
             <p className='font-bold text-gray-700'>{name}</p>
           </SwiperSlide>
-
         ))}
 
       </Swiper>

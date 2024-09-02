@@ -2,8 +2,8 @@
   "site": {
     "title": "Kometro",
     "base_url": "/",
-    "favicon": "/images/logo-title.png",
-    "logo": "/images/logo.png",
+    "favicon": "https://kometro.nyc3.cdn.digitaloceanspaces.com/landing-page/images/logo-title.png",
+    "logo": "https://kometro.nyc3.cdn.digitaloceanspaces.com/landing-page/images/logo.png",
     "logo_width": "190",
     "logo_height": "40",
     "logo_text": "Kometro - Laboratório de Metrologia"
@@ -18,11 +18,11 @@
   "nav_button": {
     "enable": true,
     "label": "Entrar",
-    "link": "https://app.befmetrologia.com.br/#/login"
+    "link": "https://app.kometro.com.br/#/login"
   },
 
   "params": {
-    "contact_form_action": "",
+    "contact_form_action": "/mail.php",
     "tag_manager_id": "",
     "footer_content": "Endereço Rod. Benjamim Constanti, 4703, Lote 06 – km 05 – Pinheiral – RJ – CEP 27197-000",
     "copyright": "By [Laísa Rio](https://laisario.github.io/)"

@@ -6,7 +6,7 @@ const Player = ({ videoSrc, autoplay = false, ...others }) => {
     videoEl &&
       videoEl.current &&
       videoEl.current.play().catch(error => {
-        console.error("Error attempting to play", error);
+        console.error("Erro ao tentar reproduzir!", error);
       });
   };
 

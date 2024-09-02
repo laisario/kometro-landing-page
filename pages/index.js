@@ -25,7 +25,7 @@ const Home = ({ frontmatter }) => {
             <h1 className="font-primary font-bold">{banner?.title}</h1>
             <div className="mt-4 mb-8">{markdownify(banner?.content, "h6")}</div>
           </div>
-          <Player videoSrc={"/videos/video-institucional.MOV"} />
+          <Player videoSrc={banner?.video} />
         </div>
       </section>
 

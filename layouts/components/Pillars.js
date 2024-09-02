@@ -20,7 +20,7 @@ function Pillars({pillars}) {
                         effect={'flip'}
                         pagination={true}
                         modules={[EffectFlip, Pagination]}
-                        className="flex bg-[#F5F5F5] col-12 md:col-3 h-[300px] md:h-auto hover:scale-105 transform transition-transform duration-100 text-center"
+                        className="flex bg-[#F5F5F5] col-12 md:col-3 h-[450px] md:h-auto hover:scale-105 transform transition-transform duration-100 text-center"
                         style={{
                             "--swiper-pagination-bullet-size": "10px",
                             "--swiper-theme-color": "#FD7622",
@@ -32,7 +32,6 @@ function Pillars({pillars}) {
                             <Image src={plan.image} alt={plan.title} width={100} height={50} />
                         </SwiperSlide>
                         <SwiperSlide className="border border-transparent rounded-xl shadow-lg p-4 flex flex-col justify-center items-center">
-                            <h4 className="mb-4 text-center">{plan.title}</h4>
                             <ul className="list-disc list-inside mb-16">
                                 {plan?.content?.map(({ text }, i) => <li key={text + i}>{text}</li>)}
                             </ul>
