@@ -4,6 +4,7 @@ import Footer from "@partials/Footer";
 import Header from "@partials/Header";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import RightSide from "./partials/RightSide";
 
 const Base = ({
   title,
@@ -93,6 +94,7 @@ const Base = ({
 
       <Header />
       <main className="container flex-grow">{children}</main>
+      <RightSide />
       <Footer />
       </div>
     </>

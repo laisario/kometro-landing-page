@@ -1,5 +1,5 @@
 <?php
-$myemail = 'contato@kometro.com.br';
+$myemail = 'comercial@envios.rkp.com.br';
 
 $name = $_POST['name'];
 $subject = $_POST['subject'];

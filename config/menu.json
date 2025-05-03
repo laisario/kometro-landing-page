@@ -6,11 +6,11 @@
     },
     {
       "name": "Serviços",
-      "url": "/servicos"
+      "url": "/servicos/"
     },
     {
       "name": "Fale conosco",
-      "url": "/contato"
+      "url": "/contato/"
     }
   ],
   "footer": [

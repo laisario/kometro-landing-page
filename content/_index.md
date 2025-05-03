@@ -17,7 +17,7 @@ service:
       enable: true
       label: Saiba mais!
       link: /servicos
-      slug: servico-1
+      slug: calibracao
   - name: "Gestão Metrológica"
     icon: "https://kometro.nyc3.cdn.digitaloceanspaces.com/landing-page/images/gestao.svg"
     content: "Gerenciamento e controle de instrumentos"
@@ -25,7 +25,7 @@ service:
       enable: true
       label: Saiba mais!
       link: /servicos
-      slug: servico-2
+      slug: gestao-metrologica
   - name: "Consultoria e auditoria"
     icon: "https://kometro.nyc3.cdn.digitaloceanspaces.com/landing-page/images/consultoria.svg"
     content: "Soluções eficientes em metrologia e qualidade"
@@ -33,7 +33,7 @@ service:
       enable: true
       label: Saiba mais!
       link: /servicos
-      slug: servico-3
+      slug: consultoria-e-auditoria
   
 
 # history
