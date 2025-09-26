@@ -6,7 +6,8 @@
         "body": "#fff",
         "border": "#FFA373",
         "theme_light": "#DDDDDD",
-        "theme_light_second": "#F7F1ED"
+        "theme_light_second": "#F7F1ED",
+        "component_background": "#F5F5F5"
       },
       "text_color": {
         "default": "#424242",

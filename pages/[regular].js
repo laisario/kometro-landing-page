@@ -7,8 +7,7 @@ import { getRegularPage, getSinglePage } from "@lib/contentParser";
 
 // for all regular pages
 const RegularPages = ({ data }) => {
-  const { title, meta_title, description, image, noindex, canonical, layout } =
-    data.frontmatter;
+  const { title, meta_title, description, image, noindex, canonical, layout } = data.frontmatter;
   const { content } = data;
 
   return (

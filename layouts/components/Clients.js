@@ -1,9 +1,9 @@
 import React from 'react'
 import { markdownify } from "@lib/utils/textConverter";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Scrollbar } from 'swiper';
+import { Pagination, Autoplay } from 'swiper';
 import 'swiper/css';
-import 'swiper/css/scrollbar';
+import 'swiper/css/pagination';
 
 function Clients({ client }) {
   return (
@@ -14,11 +14,28 @@ function Clients({ client }) {
       <Swiper
         slidesPerView={3}
         spaceBetween={50}
-        modules={[Scrollbar]}
-        scrollbar={{ draggable: true }}
+        modules={[Autoplay, Pagination]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          0: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
       >
         {client?.clients?.map(({ name, image }, i) => (
-          <SwiperSlide key={name + i} className='flex flex-col justify-center items-center mb-8'>
+          <SwiperSlide key={name + i} className='flex flex-col justify-center items-center mb-16'>
             <img src={image} alt={`Logo ${name}`} width="120px" />
             <p className='font-bold text-gray-700'>{name}</p>
           </SwiperSlide>

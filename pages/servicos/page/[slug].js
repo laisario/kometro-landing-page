@@ -1,5 +1,3 @@
-import Pagination from "@components/Pagination";
-import Cta from "@layouts/components/Cta";
 import config from "@config/config.json";
 import Base from "@layouts/Baseof";
 import { getListPage, getSinglePage } from "@lib/contentParser";
@@ -12,7 +10,6 @@ const { service_folder } = config.settings;
 const ServicePagination = ({ postIndex, posts, currentPage, pagination }) => {
   const indexOfLastPost = currentPage * pagination;
   const indexOfFirstPost = indexOfLastPost - pagination;
-  const totalPages = Math.ceil(posts.length / pagination);
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
   const { frontmatter } = postIndex;
   const { title } = frontmatter;
