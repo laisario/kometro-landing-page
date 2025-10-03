@@ -8,57 +8,72 @@ const Contato = ({ data }) => {
   const { contact_form_action } = config.params;
   const [emailSent, setEmailSent] = useState(false)
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const formData = new FormData(e.target)
+  
+    try {
+      const res = await fetch(contact_form_action, {
+        method: "POST",
+        body: formData,
+      })
+  
+      const data = await res.json()
+      if (data.success) {
+        setEmailSent(true)
+      } else {
+        alert(data.error || "Erro ao enviar a mensagem")
+      }
+    } catch (err) {
+      alert("Erro ao enviar a mensagem")
+    }
+  }
+
   return (
     <section className="section">
       <div className="container">
-        {markdownify(title, "h1", "text-center font-normal")}
+        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center">{title}</h1>
         <div className="section row pb-0">
           <div className="col-12 md:col-6 lg:col-7">
             <form
               className="contact-form"
               method="POST"
               action={contact_form_action}
-              onSubmit={() => setEmailSent(true)}
+              onSubmit={handleSubmit}
             >
-              <div className="mb-3">
-                <input
-                  className="form-input w-full rounded"
-                  name="name"
-                  type="text"
-                  placeholder="Nome"
-                  required
-                />
-              </div>
-              <div className="mb-3">
-                <input
-                  className="form-input w-full rounded"
-                  name="email"
-                  type="email"
-                  placeholder="Email"
-                  required
-                />
-              </div>
-              <div className="mb-3">
-                <input
-                  className="form-input w-full rounded"
-                  name="subject"
-                  type="text"
-                  placeholder="Assunto"
-                  required
-                />
-              </div>
-              <div className="mb-3">
-                <textarea
-                  name="message"
-                  className="form-textarea w-full rounded-md"
-                  rows="7"
-                  placeholder="Sua mensagem"
-                />
-              </div>
+              <input
+                className="form-input w-full mb-3 rounded"
+                name="name"
+                type="text"
+                placeholder="Nome"
+                required
+              />
+              <input
+                className="form-input w-full mb-3 rounded"
+                name="email"
+                type="email"
+                placeholder="Email"
+                required
+              />
+              <input
+                className="form-input w-full mb-3 rounded"
+                name="subject"
+                type="text"
+                placeholder="Assunto"
+                required
+              />
+              <textarea
+                name="message"
+                className="form-textarea w-full mb-3 rounded-md"
+                rows="7"
+                placeholder="Sua mensagem"
+              />
           
-              {emailSent ? <p className="text-white bg-lime-500 p-3 rounded">{email?.success} ✔️ </p> : <button type="submit" className="btn btn-primary">
-                Enviar mensagem
-              </button>}
+              {emailSent ? (
+                <p className="text-white bg-lime-500 p-3 rounded">Mensagem enviada ✔️</p>
+              ) : (
+                <button type="submit" className="btn btn-primary">Enviar mensagem</button>
+              )}
             </form>
           </div>
           <div className="content col-12 md:col-6 lg:col-5">

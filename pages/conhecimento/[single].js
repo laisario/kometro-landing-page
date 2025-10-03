@@ -6,13 +6,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import CarouselVideo from "@layouts/components/CarouselVideo";
 import xss from "xss";
+import Image from "next/image";
 
 
 export default function KnowledgePost({ post }) {
   return (
     <Base title={post.titulo}>
       <div className="container max-w-4xl mx-auto px-4 py-10 space-y-8">
-  
         <h1 className="text-3xl md:text-5xl font-bold text-left">
           {post.titulo}
         </h1>
@@ -28,23 +28,24 @@ export default function KnowledgePost({ post }) {
           />
         )}
 
-        {!!post.imagens_adicionais.length && (
+        {!!post?.imagens_adicionais?.length && (
           <div className="w-full flex justify-center">
             <Swiper
               spaceBetween={16}
               slidesPerView={1}
               breakpoints={{
-                768: { slidesPerView: post.imagens_adicionais.length > 1 ? 2 : 1 },
+                768: { slidesPerView: post?.imagens_adicionais?.length > 1 ? 2 : 1 },
               }}
               className="w-full max-w-4xl my-8"
             >
               {post.imagens_adicionais.map((img) => (
                 <SwiperSlide key={img.id}>
                   <div className="w-full rounded-lg overflow-hidden shadow-md">
-                    <img
+                    <Image
                       src={img.imagem}
                       alt={`Imagem adicional ${img.id}`}
                       className="w-full h-auto"
+                      fill
                     />
                   </div>
                 </SwiperSlide>
@@ -58,10 +59,18 @@ export default function KnowledgePost({ post }) {
 }
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/`);
-  const posts = await res.json();
+  let allPosts = [];
+  let nextUrl = `${process.env.NEXT_PUBLIC_API_URL}/posts/`;
 
-  const paths = posts?.results?.map((post) => ({
+  while (nextUrl) {
+    const res = await fetch(nextUrl);
+    const data = await res.json();
+
+    allPosts = [...allPosts, ...data.results];
+    nextUrl = data.next;
+  }
+
+  const paths = allPosts?.map((post) => ({
     params: { single: post?.id?.toString() },
   }));
 

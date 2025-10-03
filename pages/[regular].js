@@ -5,7 +5,6 @@ import Default from "@layouts/Default";
 import Lgpd from "@layouts/Lgpd";
 import { getRegularPage, getSinglePage } from "@lib/contentParser";
 
-// for all regular pages
 const RegularPages = ({ data }) => {
   const { title, meta_title, description, image, noindex, canonical, layout } = data.frontmatter;
   const { content } = data;
@@ -32,7 +31,6 @@ const RegularPages = ({ data }) => {
 };
 export default RegularPages;
 
-// for regular page routes
 export const getStaticPaths = async () => {
   const allslugs = getSinglePage("content");
   const slugs = allslugs.map((item) => item.slug);

@@ -15,8 +15,8 @@ const ServicePagination = ({ postIndex, posts, currentPage, pagination }) => {
   const { title } = frontmatter;
   return (
     <Base title={title}>
-      <div className="container">
-        {markdownify(title, "h1", "h1 text-center font-normal text-[56px]")}
+      <div className="section container">
+        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center">{title}</h1>
         <Posts posts={currentPosts} frontmatter={frontmatter} />
       </div>
     </Base>
@@ -33,7 +33,7 @@ export const getStaticPaths = () => {
   const totalPages = Math.ceil(allSlug.length / pagination);
   let paths = [];
 
-  for (let i = 1; i < totalPages; i++) {
+  for (let i = 0; i < totalPages; i++) {
     paths.push({
       params: {
         slug: (i + 1).toString(),

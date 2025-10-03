@@ -5,8 +5,8 @@ import Link from "next/link";
 
 function PostCard({post}) {
   return (
-    <Link href={`/conhecimento/${post.id}`} className="group block">
-      <article className="bg-card rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300 group-hover:border-accent h-full">
+    <Link href={`/conhecimento/${post?.id}/`} className="group block">
+      <article className="bg-card rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all duration-300 group-hover:border-accent h-full">
         <div className="relative aspect-[4/3]">
           <Image
             src={post.imagem_destaque || "/placeholder.svg"}
@@ -22,9 +22,9 @@ function PostCard({post}) {
             {post?.categoria?.nome}
           </span>
           <h3 className="text-xl font-bold text-foreground mb-3 text-balance group-hover:text-primary transition-colors">
-            {post.titulo}
+            {post?.titulo}
           </h3>
-          <p className="text-muted-foreground leading-relaxed text-pretty">{post.resumo}</p>
+          <p className="text-muted-foreground leading-relaxed text-pretty">{post?.resumo}</p>
           <div className="mt-4">
             <span className="text-primary font-medium group-hover:underline">Ler mais →</span>
           </div>

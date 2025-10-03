@@ -25,7 +25,7 @@ function CarouselVideo({ videos }) {
       style={{
         "--swiper-pagination-bullet-size": "10px",
         "--swiper-theme-color": "#FD7622",
-        "border-radius": "16px"
+        "borderRadius": "16px"
       }}
     >
       {videos?.map((video, i) => (

@@ -1,5 +1,4 @@
 import React from 'react'
-import config from "@config/config.json";
 
 function Lgpd({ data }) {
   const { frontmatter } = data;

@@ -1,7 +1,7 @@
 
-export function CategoryFilter({ categories, selectedCategories, onCategoryChange }) {
+export function CategoryFilter({ categories, selectedCategories, onCategoryChange, content }) {
   return (
-    <div className="mb-12">
+    <div>
       <h2 className="text-xl font-semibold text-foreground mb-6">Filtrar por categoria</h2>
       <div className="flex flex-wrap gap-3">
         {categories?.map((category) => {
@@ -19,7 +19,7 @@ export function CategoryFilter({ categories, selectedCategories, onCategoryChang
               }`}
             >
               {category.nome}
-              {!!category?.posts?.length && <span className="ml-2 text-sm opacity-75">({category.posts?.length})</span>}
+              {!!category[content]?.length && <span className="ml-2 text-sm opacity-75">({category[content]?.length})</span>}
             </button>
           )
         })}

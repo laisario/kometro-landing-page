@@ -4,7 +4,7 @@ function RightSide() {
   return (
     <>
       <a
-        href="https://api.whatsapp.com/send?phone=5524988095115&text=Olá!%20Acabei%20de%20visitar%20o%20site%20da%20Kometro%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços.%20Pode%20me%20ajudar%3F" 
+        href="https://api.whatsapp.com/send?phone=5524988095115&text=Olá!%20Acabei%20de%20visitar%20o%20site%20da%20Kometro%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços.%20Pode%20me%20ajudar%3F"
         className="fixed z-[9999] w-[60px] h-[60px] md:bottom-10 md:right-10 bottom-5 right- flex items-center justify-center bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 rounded-lg px-3 py-2.5 text-center text-white"
         target="_blank"
         data-twe-toggle="tooltip"

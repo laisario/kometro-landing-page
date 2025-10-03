@@ -25,14 +25,14 @@ function Services({ service, cta, videos }) {
               key={`service-${i}`}
             >
               {item.icon && (
-                  <Image
-                    className="mx-auto"
-                    src={item.icon}
-                    width={50}
-                    height={50}
-                    alt=""
-                  />
-                )}
+                <Image
+                  className="mx-auto"
+                  src={item.icon}
+                  width={50}
+                  height={50}
+                  alt=""
+                />
+              )}
               <div className="mt-4">
                   {markdownify(item.name, "h3", "h5")}
                   <p className="mt-3">{item.content}</p>

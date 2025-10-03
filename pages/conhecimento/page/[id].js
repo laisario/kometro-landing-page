@@ -3,6 +3,7 @@ import { CategoryFilter } from "@layouts/components/CategoryFilter";
 import FeaturedPost from "@layouts/components/FeaturedPost";
 import PostGrid from "@layouts/partials/PostGrid";
 import { useEffect, useState } from "react";
+import { createSlug } from "utils/slug";
 
 export default function Knowledge({ categories }) {
   const [posts, setPosts] = useState([]);
@@ -10,8 +11,6 @@ export default function Knowledge({ categories }) {
   const [page, setPage] = useState(1);
   const [category, setCategory] = useState("todas");
   const [loading, setLoading] = useState(false);
-  const [pagination, setPagination] = useState({ next: null, previous: null });
-
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -25,8 +24,7 @@ export default function Knowledge({ categories }) {
 
         const res = await fetch(url);
         const data = await res.json();
-        setPosts(data.results);
-        setPagination({ next: data.next, previous: data.previous });
+        setPosts(data);
       } catch (error) {
         console.error("Erro ao buscar posts", error);
       } finally {
@@ -70,19 +68,22 @@ export default function Knowledge({ categories }) {
             Explore nossos artigos e conteúdos educacionais sobre metrologia, calibração e controle de qualidade.
           </p>
         </section>
+
         <CategoryFilter
           categories={categories}
           selectedCategories={category}
           onCategoryChange={handleCategoryChange}
+          content="posts"
         />
-        
-        {loading ? (<p className="text-center" >Carregando...</p>) : (
-          <>
-            {!!featuredPost?.length && <FeaturedPost posts={featuredPost} />}
-            <PostGrid posts={posts} pagination={pagination} setPage={setPage} />
-          </>
-        )}
 
+        <div className="mt-12">
+          {loading ? (<p className="text-center" >Carregando...</p>) : (
+            <>
+              {!!featuredPost?.length && <FeaturedPost posts={featuredPost} />}
+              <PostGrid posts={posts} page={page} setPage={setPage} />
+            </>
+          )}
+        </div>
       </div>
     </Base>
   );
@@ -90,11 +91,18 @@ export default function Knowledge({ categories }) {
 
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/`);
-  const posts = await res.json();
+  let allPosts = [];
+  let nextUrl = `${process.env.NEXT_PUBLIC_API_URL}/posts/`;
 
-  const paths = posts?.results?.map((post) => ({
-    params: { id: post?.id },
+  while (nextUrl) {
+    const res = await fetch(nextUrl);
+    const data = await res.json();
+
+    allPosts = [...allPosts, ...data.results];
+    nextUrl = data.next;
+  }
+  const paths = allPosts?.map((post) => ({
+    params: { id: post?.id?.toString() },
   }));
 
   return {

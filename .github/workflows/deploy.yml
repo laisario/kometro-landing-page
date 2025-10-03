@@ -1,0 +1,35 @@
+name: Deploy Landing to KingHost
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Next.js
+        run: npm run build && npm run export
+
+      - name: Deploy via Git
+        run: |
+          git config --global user.email "laisa.rioverde@gmail.com"
+          git config --global user.name "Laisa Muito Linda"
+          git remote add kinghost ${{ secrets.KINGHOST_GIT }}
+          git add .
+          git commit -m "Deploy automático"
+          git push --force kinghost main

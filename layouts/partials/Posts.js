@@ -1,6 +1,4 @@
 import config from "@config/config.json";
-import CarouselVideo from "@layouts/components/CarouselVideo";
-import Player from "@layouts/components/Player";
 import { plainify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import Link from "next/link";
