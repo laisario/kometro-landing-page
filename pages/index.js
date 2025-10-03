@@ -29,11 +29,9 @@ const Home = ({ frontmatter, feedbacks, posts, }) => {
         </div>
       </section>
 
-
       <section className="section flex flex-col items-center text-center">
        <History timeline={timeline}/>
       </section>
-
 
       <section className="section">
         <Services service={service} cta={call_to_action} videos={videos} />
@@ -50,7 +48,6 @@ const Home = ({ frontmatter, feedbacks, posts, }) => {
       {!!feedbacks?.length && <section className="section">
         <Feedbacks feedbacks={feedbacks} />
       </section>}
-
     </Base>
   );
 };
