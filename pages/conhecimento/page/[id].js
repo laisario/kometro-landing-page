@@ -3,7 +3,6 @@ import { CategoryFilter } from "@layouts/components/CategoryFilter";
 import FeaturedPost from "@layouts/components/FeaturedPost";
 import PostGrid from "@layouts/partials/PostGrid";
 import { useEffect, useState } from "react";
-import { createSlug } from "utils/slug";
 
 export default function Knowledge({ categories }) {
   const [posts, setPosts] = useState([]);

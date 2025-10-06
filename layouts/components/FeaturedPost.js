@@ -9,7 +9,6 @@ import 'swiper/css/effect-cards';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination } from 'swiper';
-import { createSlug } from 'utils/slug';
 
 function FeaturedPost({posts}) {
   return (
