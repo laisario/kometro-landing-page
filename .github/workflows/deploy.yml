@@ -28,8 +28,8 @@ jobs:
       - name: Deploy via Git
         run: |
           git config --global user.email "laisa.rioverde@gmail.com"
-          git config --global user.name "Laisa Muito Linda"
+          git config --global user.name "Laísa Rioverde"
           git remote add kinghost ${{ secrets.KINGHOST_GIT }}
-          git add .
-          git commit -m "Deploy automático"
+          git add -A
+          git diff-index --quiet HEAD || git commit -m "Deploy automático"
           git push --force kinghost main
