@@ -65,6 +65,7 @@ function Store({categories}) {
     <Base title="Equipamentos">
       <h1>AAAAAAAAAAAAAA</h1>
       <h1>BBBBBBBBBB</h1>
+      <h1>CCCCCCCCCC</h1>
       <div className="container flex-grow mb-16" >
         <section className="section">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center">Catálogo de Equipamentos de Metrologia</h1>
