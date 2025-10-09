@@ -17,7 +17,7 @@ function Store({categories}) {
   const totalPages = Math.ceil(equipment?.count / ITEMS_PER_PAGE)
   
   const handleCategoryChange = (cat) => {
-    setCategory(cat?.nome === "todas" ? "todas" : cat?.id)
+    setCategory(cat?.nome?.toLowerCase() === "todas" ? "todas" : cat?.id)
     setPage(1)
   }
   
