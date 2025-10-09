@@ -19,12 +19,14 @@ jobs:
         with:
           node-version: 20
 
+      - name: 📄 Making .env
+        run: |
+          echo "${{ secrets.NEXT_PUBLIC_API_URL }}" > .env
+
       - name: Build Next.js
         run: |
           npm install
           npm run export
-        env:
-          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
