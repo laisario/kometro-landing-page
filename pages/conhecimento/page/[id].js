@@ -90,24 +90,44 @@ export default function Knowledge({ categories }) {
 
 
 export const getStaticPaths = async () => {
-  let allPosts = [];
-  let nextUrl = `${process.env.NEXT_PUBLIC_API_URL}/posts/`;
+  try {
+    let allPosts = [];
+    let nextUrl = `${process.env.NEXT_PUBLIC_API_URL}/posts/`;
 
-  while (nextUrl) {
-    const res = await fetch(nextUrl);
-    const data = await res.json();
+    while (nextUrl) {
+      const res = await fetch(nextUrl);
+      
+      if (!res.ok) {
+        console.error(`API returned status ${res.status}`);
+        break;
+      }
+      
+      const contentType = res.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        console.error(`API returned non-JSON content: ${contentType}`);
+        break;
+      }
+      
+      const data = await res.json();
+      allPosts = [...allPosts, ...(data.results || [])];
+      nextUrl = data.next;
+    }
+    
+    const paths = allPosts?.map((post) => ({
+      params: { id: post?.id?.toString() },
+    }));
 
-    allPosts = [...allPosts, ...data.results];
-    nextUrl = data.next;
+    return {
+      paths: paths.length > 0 ? paths : [],
+      fallback: 'blocking',
+    };
+  } catch (error) {
+    console.error('Error in getStaticPaths:', error);
+    return {
+      paths: [],
+      fallback: 'blocking',
+    };
   }
-  const paths = allPosts?.map((post) => ({
-    params: { id: post?.id?.toString() },
-  }));
-
-  return {
-    paths,
-    fallback: false,
-  };
 };
 
 
